@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact | Shashwat Tiwari</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1: #232526;
+      --bg2: #414345;
+      --neon: #00ffe7;
+      --muted: #bfcfcf;
+      --glass: rgba(255,255,255,0.03);
+    }
+
+    body{
+      margin:0;
+      font-family:'Poppins',sans-serif;
+      background: linear-gradient(135deg, var(--bg1), var(--bg2));
+      color:#eee;
+      min-height:100vh;
+    }
+
+    /* NAV */
+    nav{
+      background:#0f0f10;
+      box-shadow:0 6px 20px rgba(0,0,0,0.6);
+      position:sticky;
+      top:0;
+      z-index:999;
+    }
+    nav .nav-inner{
+      max-width:1150px;
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:12px 20px;
+    }
+    .brand{
+      color:var(--neon);
+      font-weight:600;
+      font-size:1.05rem;
+      text-shadow:0 0 8px rgba(0,255,231,0.12);
+    }
+    .menu{
+      display:flex;
+      gap:16px;
+    }
+    .menu a{
+      color:var(--neon);
+      text-decoration:none;
+      padding:8px 10px;
+      border-radius:8px;
+      transition: all .18s ease;
+      font-weight:500;
+    }
+    .menu a:hover, .menu a.active{
+      color:#fff;
+      box-shadow:0 0 14px rgba(0,255,231,0.12);
+      text-shadow:0 0 8px rgba(0,255,231,0.12);
+      background: rgba(0,255,231,0.02);
+      transform:translateY(-2px);
+    }
+
+    /* HERO */
+    .hero{
+      text-align:center;
+      padding:36px 20px 18px;
+    }
+    .hero h1{
+      color:var(--neon);
+      font-size:2rem;
+      text-shadow:0 0 12px rgba(0,255,231,0.12);
+      margin-bottom:8px;
+    }
+    .hero p{
+      color:var(--muted);
+      font-size:0.95rem;
+    }
+
+    /* CONTACT INFO CARD */
+    .contact-container{
+      max-width:500px;
+      margin:40px auto 80px;
+      padding:20px;
+      background: var(--glass);
+      border-radius:14px;
+      box-shadow:0 8px 30px rgba(0,0,0,0.6), 0 0 28px rgba(0,255,231,0.04) inset;
+      border:1px solid rgba(0,255,231,0.06);
+      animation: fadeSlideIn 0.6s ease-out forwards;
+      text-align:center;
+    }
+    @keyframes fadeSlideIn {
+      from {opacity:0; transform:translateY(30px);}
+      to {opacity:1; transform:translateY(0);}
+    }
+    .contact-item{
+      margin:14px 0;
+      font-size:1rem;
+    }
+    .contact-item a{
+      color:var(--neon);
+      text-decoration:none;
+      font-weight:500;
+    }
+    .contact-item a:hover{
+      text-shadow:0 0 8px rgba(0,255,231,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">Shashwat • Portfolio</div>
+      <div class="menu">
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="certifications.html">Certs</a>
+        <a href="contact.html" class="active">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Contact Me</h1>
+    <p>Here’s how you can reach me directly.</p>
+  </section>
+
+  <!-- CONTACT INFO -->
+  <section class="contact-container">
+    <div class="contact-item">
+      📧 Email: <a href="mailto:your@email.com">shashwat.tiwari194@gmail.com</a>
+    </div>
+    <div class="contact-item">
+      📞 Phone: <a href="tel:+911234567890">+91 62692 60694</a>
+    </div>
+  </section>
+
+</body>
+</html>

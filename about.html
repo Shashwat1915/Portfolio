@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Me | Shashwat Tiwari</title>
+  <style>
+    :root{
+      --bg1: #232526;
+      --bg2: #414345;
+      --neon: #00ffe7;
+      --muted: #bfcfcf;
+    }
+
+    body{
+      margin:0;
+      font-family:'Poppins',sans-serif;
+      background: linear-gradient(135deg, var(--bg1), var(--bg2));
+      color:#fff;
+      min-height:100vh;
+    }
+
+    /* NAV (Skills style) */
+    nav{
+      background:#0f0f10;
+      box-shadow:0 6px 20px rgba(0,0,0,0.6);
+      position:sticky;
+      top:0;
+      z-index:999;
+    }
+    nav .nav-inner{
+      max-width:1150px;
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:12px 20px;
+      gap:15px;
+    }
+    .brand{
+      color:var(--neon);
+      font-weight:600;
+      font-size:1.05rem;
+      text-shadow:0 0 8px rgba(0,255,231,0.12);
+      letter-spacing:0.4px;
+    }
+    .menu{
+      display:flex;
+      gap:16px;
+      align-items:center;
+    }
+    .menu a{
+      color:var(--neon);
+      text-decoration:none;
+      padding:8px 10px;
+      border-radius:8px;
+      transition: all .18s ease;
+      font-weight:500;
+    }
+    .menu a:hover, .menu a.active{
+      color:#fff;
+      box-shadow:0 0 14px rgba(0,255,231,0.12);
+      text-shadow:0 0 8px rgba(0,255,231,0.12);
+      transform:translateY(-2px);
+      background: rgba(0,255,231,0.02);
+    }
+
+    /* Animations */
+    @keyframes fadeSlideIn {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in {
+      animation: fadeSlideIn 1s ease-out forwards;
+    }
+
+    /* About container */
+    .about-container {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,255,231,0.3);
+    }
+
+    /* About form styling */
+    .about-form fieldset {
+      border: 1px solid rgba(0,255,231,0.5);
+      padding: 1rem 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 10px;
+      background: rgba(0,0,0,0.4);
+    }
+    .about-form legend {
+      padding: 0 0.5rem;
+      font-weight: bold;
+      color: var(--neon);
+    }
+    .about-form p {
+      margin: 0.4rem 0;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">Shashwat • Portfolio</div>
+      <div class="menu">
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="certifications.html">Certs</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <section class="about-container fade-in">
+      <h2>About Me</h2>
+      <form class="about-form">
+        <!-- Personal Info -->
+        <fieldset>
+          <legend>Personal Information</legend>
+          <p><strong>Name:</strong> Shashwat Tiwari</p>
+          <p><strong>Email:</strong> itsrioyk@gmail.com</p>
+          <p><strong>Location:</strong> Indore</p>
+        </fieldset>
+
+        <!-- Education -->
+        <fieldset>
+          <legend>Education</legend>
+          <p>B.Tech in Computer Science – Svvv, Indore (2022–2026)</p>
+          <p>Specialization: Artificial Intelligence</p>
+        </fieldset>
+
+        <!-- Skills Overview -->
+        <fieldset>
+          <legend>Interests & Skills</legend>
+          <p>Programming Languages: Python, Java, C++</p>
+          <p>Areas of Interest: AI, Web Development, Cloud Computing</p>
+        </fieldset>
+
+        <!-- Fun Facts -->
+        <fieldset>
+          <legend>Fun Facts</legend>
+          <p>I love building side projects and experimenting with AI models.</p>
+          <p>In my free time, I explore new tech trends and play chess.</p>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    // Auto-highlight active nav link
+    document.querySelectorAll('.menu a').forEach(link => {
+      if (link.href === window.location.href) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>

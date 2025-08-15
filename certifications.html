@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Certifications | Shashwat Tiwari</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1: #232526;
+      --bg2: #414345;
+      --neon: #00ffe7;
+      --muted: #bfcfcf;
+      --card-bg: rgba(18,18,18,0.7);
+      --glass: rgba(255,255,255,0.03);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:'Poppins',sans-serif;
+      background: linear-gradient(135deg, var(--bg1), var(--bg2));
+      color:#eee;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      min-height:100vh;
+    }
+
+    /* NAV (same as Skills) */
+    nav{
+      background:#0f0f10;
+      box-shadow:0 6px 20px rgba(0,0,0,0.6);
+      position:sticky;
+      top:0;
+      z-index:999;
+    }
+    nav .nav-inner{
+      max-width:1150px;
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:12px 20px;
+      gap:15px;
+    }
+    .brand{
+      color:var(--neon);
+      font-weight:600;
+      font-size:1.05rem;
+      text-shadow:0 0 8px rgba(0,255,231,0.12);
+      letter-spacing:0.4px;
+    }
+    .menu{
+      display:flex;
+      gap:16px;
+      align-items:center;
+    }
+    .menu a{
+      color:var(--neon);
+      text-decoration:none;
+      padding:8px 10px;
+      border-radius:8px;
+      transition: all .18s ease;
+      font-weight:500;
+    }
+    .menu a:hover, .menu a.active{
+      color:#fff;
+      box-shadow:0 0 14px rgba(0,255,231,0.12);
+      text-shadow:0 0 8px rgba(0,255,231,0.12);
+      transform:translateY(-2px);
+      background: rgba(0,255,231,0.02);
+    }
+
+    /* Header Title */
+    .hero{
+      text-align:center;
+      padding:36px 20px 18px;
+    }
+    .hero h1{
+      margin:8px 0 0;
+      color:var(--neon);
+      font-size:2rem;
+      letter-spacing:0.6px;
+      text-shadow:0 0 12px rgba(0,255,231,0.12);
+    }
+    .hero p{
+      margin:8px 0 0;
+      color:var(--muted);
+      font-size:0.95rem;
+    }
+
+    /* Certifications grid */
+    .certs-wrap{
+      max-width:1150px;
+      margin:28px auto 80px;
+      padding:0 20px;
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap:28px;
+    }
+    .cert-card{
+      background:var(--card-bg);
+      border-radius:14px;
+      border:1px solid rgba(0,255,231,0.06);
+      padding:18px;
+      box-shadow:0 8px 30px rgba(0,0,0,0.6), 0 0 28px rgba(0,255,231,0.04) inset;
+      text-align:center;
+      transition: transform .25s cubic-bezier(.2,.9,.3,1), box-shadow .25s;
+      opacity:0;
+      transform: translateY(18px) scale(.98);
+      animation: reveal .45s ease forwards;
+      animation-delay: calc(var(--i) * 0.06s);
+    }
+    .cert-card:hover{
+      transform: translateY(-8px) scale(1.06);
+      box-shadow:0 18px 40px rgba(0,255,231,0.09);
+    }
+    .cert-card img{
+      width:100%;
+      border-radius:10px;
+      margin-bottom:14px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.5);
+    }
+    .cert-card h3{
+      margin:0;
+      font-size:1.05rem;
+      color:#bff;
+    }
+    .cert-card p{
+      margin-top:6px;
+      color:var(--muted);
+      font-size:0.88rem;
+    }
+
+    @keyframes reveal {
+      to { opacity:1; transform: translateY(0) scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">Shashwat • Portfolio</div>
+      <div class="menu">
+        <a href="index.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="certifications.html" class="active">Certifications</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <h1>My Certifications</h1>
+    <p>Achievements and qualifications I’ve earned</p>
+  </header>
+
+  <!-- Certifications Grid -->
+  <section class="certs-wrap">
+    <div class="cert-card" style="--i:1">
+      <img src="cert1.jpg" alt="Certification 1">
+      <h3>Python AI Automation</h3>
+      <p>Google, Coursera • 2024</p>
+    </div>
+    <div class="cert-card" style="--i:2">
+      <img src="cert2.jpg" alt="Certification 2">
+      <h3>Database Managment</h3>
+      <p>NPTEL • 2023</p>
+    </div>
+    <div class="cert-card" style="--i:3">
+      <img src="cert3.jpg" alt="Certification 3">
+      <h3>Cloud Application Developer</h3>
+      <p>IBM  • 2024</p>
+    </div>
+  </section>
+</body>
+</html>

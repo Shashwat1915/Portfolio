@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects | Shashwat Tiwari</title>
+  <style>
+    :root{
+      --bg1: #232526;
+      --bg2: #414345;
+      --neon: #00ffe7;
+    }
+
+    body{
+      margin:0;
+      font-family:'Poppins',sans-serif;
+      background: linear-gradient(135deg, var(--bg1), var(--bg2));
+      color:#fff;
+      min-height:100vh;
+      overflow-x:hidden;
+    }
+
+    /* NAV */
+    nav{
+      background:#0f0f10;
+      box-shadow:0 6px 20px rgba(0,0,0,0.6);
+      position:sticky;
+      top:0;
+      z-index:999;
+      animation: navDrop 0.8s ease forwards;
+    }
+    @keyframes navDrop {
+      0% { transform: translateY(-100%); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+    nav .nav-inner{
+      max-width:1150px;
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:12px 20px;
+    }
+    .brand{
+      color:var(--neon);
+      font-weight:600;
+      font-size:1.05rem;
+    }
+    .menu{
+      display:flex;
+      gap:16px;
+    }
+    .menu a{
+      color:var(--neon);
+      text-decoration:none;
+      padding:8px 10px;
+      border-radius:8px;
+      transition: all .18s ease;
+      font-weight:500;
+    }
+    .menu a:hover, .menu a.active{
+      color:#fff;
+      box-shadow:0 0 14px rgba(0,255,231,0.12);
+      background: rgba(0,255,231,0.02);
+      transform:translateY(-2px);
+    }
+
+    /* Projects section */
+    .projects-section{
+      max-width:1100px;
+      margin:3rem auto;
+      padding:0 1rem;
+    }
+    .projects-section h2{
+      text-align:center;
+      color:var(--neon);
+      margin-bottom:2rem;
+      animation: glowText 2s ease-in-out infinite alternate;
+    }
+    @keyframes glowText {
+      0% { text-shadow: 0 0 5px var(--neon), 0 0 10px var(--neon); }
+      100% { text-shadow: 0 0 20px var(--neon), 0 0 40px var(--neon); }
+    }
+
+    .projects-grid{
+      display:grid;
+      gap:2rem;
+      grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .project-card{
+      background:rgba(255,255,255,0.05);
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow:0 0 12px rgba(0,255,231,0.15);
+      display:flex;
+      flex-direction:column;
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover{
+      transform: translateY(-10px) scale(1.03);
+      box-shadow:0 0 25px rgba(0,255,231,0.45);
+    }
+    .project-img{
+      width:100%;
+      height:180px;
+      object-fit:cover;
+      animation: imgZoom 6s ease-in-out infinite alternate;
+    }
+    @keyframes imgZoom {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.1); }
+    }
+    .project-content{
+      padding:1rem;
+      flex:1;
+      display:flex;
+      flex-direction:column;
+    }
+    .project-title{
+      color:var(--neon);
+      font-size:1.2rem;
+      margin-bottom:0.5rem;
+    }
+    .project-desc{
+      flex:1;
+      font-size:0.9rem;
+      line-height:1.5;
+      color:#ddd;
+    }
+    .project-link{
+      display:inline-block;
+      margin-top:1rem;
+      padding:0.5rem 1rem;
+      color:#fff;
+      background:var(--neon);
+      border:none;
+      border-radius:6px;
+      text-decoration:none;
+      font-weight:600;
+      transition: background .2s ease, transform .2s ease;
+    }
+    .project-link:hover{
+      background:#00d9bf;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">Shashwat • Portfolio</div>
+      <div class="menu">
+        <a href="index.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="certifications.html">Certs</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="projects-section">
+      <h2>My Projects</h2>
+      <div class="projects-grid">
+        
+        <!-- Project Card 1 -->
+        <div class="project-card">
+          <img src="project1.jpg" alt="Project 1" class="project-img" />
+          <div class="project-content">
+            <h3 class="project-title">Sports Match Prediction</h3>
+            <p class="project-desc">Data-driven predictions for upcoming sports matches.</p>
+            <a href="https://momentum-7825.onrender.com/" class="project-link">View Project</a>
+          </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="project-card">
+          <img src="project2.jpg" alt="Project 2" class="project-img" />
+          <div class="project-content">
+            <h3 class="project-title">Text Summerization</h3>
+            <p class="project-desc">Turn long texts into clear, concise summaries in seconds</p>
+            <a href="https://textsu-w1t9.onrender.com/" class="project-link">View Project</a>
+          </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="project-card">
+          <img src="project3.jpg" alt="Project 3" class="project-img" />
+          <div class="project-content">
+            <h3 class="project-title">Fashion Recommendation Site</h3>
+            <p class="project-desc">AI-powered, personalized fashion recommendations.</p>
+            <a href="https://kleidung-1.onrender.com/" class="project-link">View Project</a>
+          </div>
+        </div>
+
+        <!-- Project Card 4 -->
+        <div class="project-card">
+          <img src= "project4.png" alt="Project 4" class="project-img" />
+          <div class="project-content">
+            <h3 class="project-title">Silent Speech Recognition Project.</h3>
+            <p class="project-desc">Minor Project, Still In Development.</p>
+            <a href= "#" class="project-link">View Project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Highlight current nav link
+    document.querySelectorAll('.menu a').forEach(link => {
+      if (link.href === window.location.href) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>
