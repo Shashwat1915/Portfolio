@@ -12,5 +12,5 @@ function typeText(elementId, text, delay = 75) {
   type();
 }
 
-typeText('name', "My name is Shashwat Tiwari", 60);
+typeText('name', "This Is Shashwat Tiwari", 60);
 typeText('intro', "Passionate developer constantly learning and evolving with technology.", 40);
