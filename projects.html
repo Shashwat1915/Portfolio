@@ -65,6 +65,21 @@
       transform:translateY(-2px);
     }
 
+    /* Hamburger button (hidden on desktop) */
+    .hamburger{
+      display:none;
+      flex-direction:column;
+      gap:5px;
+      cursor:pointer;
+    }
+    .hamburger span{
+      width:25px;
+      height:3px;
+      background:var(--neon);
+      border-radius:2px;
+      transition:0.3s;
+    }
+
     /* Projects section */
     .projects-section{
       max-width:1100px;
@@ -145,6 +160,29 @@
       background:#00d9bf;
       transform: scale(1.05);
     }
+
+    /* =====================
+       RESPONSIVE DESIGN
+    ====================== */
+    @media(max-width:768px){
+      .menu{
+        display:none;
+        position:absolute;
+        top:60px;
+        right:20px;
+        flex-direction:column;
+        background:#0f0f10;
+        padding:15px;
+        border-radius:10px;
+        box-shadow:0 8px 20px rgba(0,0,0,0.6);
+      }
+      .menu.show{
+        display:flex;
+      }
+      .hamburger{
+        display:flex;
+      }
+    }
   </style>
 </head>
 <body>
@@ -157,6 +195,12 @@
         <a href="projects.html" class="active">Projects</a>
         <a href="certifications.html">Certs</a>
         <a href="contact.html">Contact</a>
+      </div>
+      <!-- Hamburger -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
   </nav>
@@ -198,11 +242,11 @@
 
         <!-- Project Card 4 -->
         <div class="project-card">
-          <img src= "project4.png" alt="Project 4" class="project-img" />
+          <img src="project4.png" alt="Project 4" class="project-img" />
           <div class="project-content">
-            <h3 class="project-title">Silent Speech Recognition Project.</h3>
+            <h3 class="project-title">Silent Speech Recognition Project</h3>
             <p class="project-desc">Minor Project, Still In Development.</p>
-            <a href= "#" class="project-link">View Project</a>
+            <a href="#" class="project-link">View Project</a>
           </div>
         </div>
       </div>
@@ -215,6 +259,13 @@
       if (link.href === window.location.href) {
         link.classList.add('active');
       }
+    });
+
+    // Mobile nav toggle
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.querySelector('.menu');
+    hamburger.addEventListener('click', () => {
+      menu.classList.toggle('show');
     });
   </script>
 </body>

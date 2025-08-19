@@ -21,12 +21,10 @@
       font-family:'Poppins',sans-serif;
       background: linear-gradient(135deg, var(--bg1), var(--bg2));
       color:#eee;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
       min-height:100vh;
     }
 
-    /* NAV (same as Skills) */
+    /* NAV */
     nav{
       background:#0f0f10;
       box-shadow:0 6px 20px rgba(0,0,0,0.6);
@@ -42,6 +40,7 @@
       justify-content:space-between;
       padding:12px 20px;
       gap:15px;
+      flex-wrap: wrap; 
     }
     .brand{
       color:var(--neon);
@@ -54,6 +53,7 @@
       display:flex;
       gap:16px;
       align-items:center;
+      flex-wrap: wrap; 
     }
     .menu a{
       color:var(--neon);
@@ -62,6 +62,7 @@
       border-radius:8px;
       transition: all .18s ease;
       font-weight:500;
+      font-size:0.95rem;
     }
     .menu a:hover, .menu a.active{
       color:#fff;
@@ -71,7 +72,7 @@
       background: rgba(0,255,231,0.02);
     }
 
-    /* Header Title */
+
     .hero{
       text-align:center;
       padding:36px 20px 18px;
@@ -89,7 +90,7 @@
       font-size:0.95rem;
     }
 
-    /* Certifications grid */
+    /* Certifications Grid */
     .certs-wrap{
       max-width:1150px;
       margin:28px auto 80px;
@@ -135,10 +136,44 @@
     @keyframes reveal {
       to { opacity:1; transform: translateY(0) scale(1); }
     }
+
+    /* 📱 RESPONSIVE FIXES */
+    @media (max-width: 768px) {
+      nav .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .menu {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+      }
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+      .hero p {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.4rem;
+      }
+      .hero p {
+        font-size: 0.85rem;
+      }
+      .cert-card h3 {
+        font-size: 1rem;
+      }
+      .cert-card p {
+        font-size: 0.8rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <!-- Navbar -->
+
   <nav>
     <div class="nav-inner">
       <div class="brand">Shashwat • Portfolio</div>
@@ -152,13 +187,12 @@
     </div>
   </nav>
 
-  <!-- Hero -->
+
   <header class="hero">
     <h1>My Certifications</h1>
     <p>Achievements and qualifications I’ve earned</p>
   </header>
 
-  <!-- Certifications Grid -->
   <section class="certs-wrap">
     <div class="cert-card" style="--i:1">
       <img src="cert1.jpg" alt="Certification 1">
@@ -167,13 +201,13 @@
     </div>
     <div class="cert-card" style="--i:2">
       <img src="cert2.jpg" alt="Certification 2">
-      <h3>Database Managment</h3>
+      <h3>Database Management</h3>
       <p>NPTEL • 2023</p>
     </div>
     <div class="cert-card" style="--i:3">
       <img src="cert3.jpg" alt="Certification 3">
       <h3>Cloud Application Developer</h3>
-      <p>IBM  • 2024</p>
+      <p>IBM • 2024</p>
     </div>
   </section>
 </body>

@@ -64,6 +64,20 @@
       transform:translateY(-2px);
     }
 
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: var(--neon);
+      border-radius: 2px;
+    }
+
     /* HERO */
     .hero{
       text-align:center;
@@ -108,6 +122,32 @@
     .contact-item a:hover{
       text-shadow:0 0 8px rgba(0,255,231,0.2);
     }
+
+    /* Responsive */
+    @media(max-width:768px){
+      .menu {
+        display: none;
+        flex-direction: column;
+        background: #111;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .menu.show {
+        display: flex;
+      }
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    @media(max-width:500px){
+      .hero h1 { font-size: 1.6rem; }
+      .hero p { font-size: 0.9rem; }
+      .contact-container { margin: 20px; padding: 15px; }
+    }
   </style>
 </head>
 <body>
@@ -123,6 +163,9 @@
         <a href="certifications.html">Certs</a>
         <a href="contact.html" class="active">Contact</a>
       </div>
+      <div class="hamburger" onclick="document.querySelector('.menu').classList.toggle('show')">
+        <span></span><span></span><span></span>
+      </div>
     </div>
   </nav>
 
@@ -135,10 +178,10 @@
   <!-- CONTACT INFO -->
   <section class="contact-container">
     <div class="contact-item">
-      📧 Email: <a href="mailto:your@email.com">shashwat.tiwari194@gmail.com</a>
+      📧 Email: <a href="mailto:shashwat.tiwari194@gmail.com">shashwat.tiwari194@gmail.com</a>
     </div>
     <div class="contact-item">
-      📞 Phone: <a href="tel:+911234567890">+91 62692 60694</a>
+      📞 Phone: <a href="tel:+916269260694">+91 62692 60694</a>
     </div>
   </section>
 
