@@ -72,7 +72,6 @@
       background: rgba(0,255,231,0.02);
     }
 
-
     .hero{
       text-align:center;
       padding:36px 20px 18px;
@@ -93,7 +92,7 @@
     /* Certifications Grid */
     .certs-wrap{
       max-width:1150px;
-      margin:28px auto 80px;
+      margin:28px auto 40px;
       padding:0 20px;
       display:grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -135,6 +134,29 @@
 
     @keyframes reveal {
       to { opacity:1; transform: translateY(0) scale(1); }
+    }
+
+    /* View More Button */
+    .more-certs{
+      text-align:center;
+      margin:40px 0 80px;
+    }
+    .more-certs a{
+      display:inline-block;
+      background:rgba(0,255,231,0.08);
+      color:var(--neon);
+      padding:12px 28px;
+      border-radius:12px;
+      font-weight:600;
+      text-decoration:none;
+      box-shadow:0 0 14px rgba(0,255,231,0.1);
+      transition:all 0.25s ease;
+    }
+    .more-certs a:hover{
+      background:rgba(0,255,231,0.15);
+      color:#fff;
+      transform:translateY(-3px) scale(1.05);
+      box-shadow:0 0 20px rgba(0,255,231,0.25);
     }
 
     /* 📱 RESPONSIVE FIXES */
@@ -187,7 +209,6 @@
     </div>
   </nav>
 
-
   <header class="hero">
     <h1>My Certifications</h1>
     <p>Achievements and qualifications I’ve earned</p>
@@ -210,5 +231,11 @@
       <p>IBM • 2024</p>
     </div>
   </section>
+
+  <!-- 🔗 View All Certifications -->
+  <div class="more-certs">
+    <a href="https://certifications-gf9h.onrender.com/" target="_blank">View All Certifications →</a>
+  </div>
+
 </body>
 </html>
